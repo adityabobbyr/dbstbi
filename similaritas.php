@@ -20,7 +20,7 @@ function getSimilarityCoefficient( $item1, $item2 ) {
 
 
   // Masukkan informasi file ke database
-  $konek = mysqli_connect("localhost","root","","dbstbi");
+  $konek = mysqli_connect("sql303.epizy.com","epiz_26789813","Mi11uQrGLV","epiz_26789813_stbi");
   
 $query = "SELECT token FROM `dokumen` where nama_file='./files/UU-12-92bb.pdf'";
 $result =mysqli_query($konek, $query);

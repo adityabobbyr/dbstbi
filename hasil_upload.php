@@ -38,7 +38,7 @@ $myArray = explode(" ", $teks); //proses tokenisasi
 
 $filteredarray = array_diff($myArray, $astoplist); //remove stopword
 $st = new IDNstemmer();
-$konek = mysqli_connect("localhost","root","","dbstbi");
+$konek = mysqli_connect("epiz_26789813_stbi","epiz_26789813","Mi11uQrGLV","epiz_26789813_stbi");
 
  
 
@@ -75,7 +75,7 @@ if (move_uploaded_file($lokasi_file,"$folder")){
   echo "Nama File : <b>$nama_file</b> sukses di upload";
   
   // Masukkan informasi file ke database
-  $konek = mysqli_connect("localhost","root","","upload");
+  $konek = mysqli_connect("sql303.epizy.com","epiz_26789813","Mi11uQrGLV","epiz_26789813_stbi");
 
   $query = "INSERT INTO upload (nama_file, deskripsi, tgl_upload)
             VALUES('$nama_file', '$_POST[deskripsi]', '$tgl_upload')";

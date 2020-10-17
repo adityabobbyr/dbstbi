@@ -1,3 +1,12 @@
+<?php
+//membuat koneksi ke database
+$host='sql303.epizy.com';
+$user='epiz_26789813';
+$pass='Mi11uQrGLV';
+$database='epiz_26789813_stbi';
+
+$conn=new mysqli($host,$user,$pass,$database) or die('MySql Tidak Connect');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +30,6 @@
 
 <body>
 
-  <!-- Navigation -->
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -58,78 +66,60 @@
 
 
 
+    <!-- ahir havbar -->
+<center> 
+HASIL TOKENISASI DAN STEMMING
+<br>
+<br>
+
+<!-- ///////////////////////////// Script untuk membuat tabel///////////////////////////////// -->
 
 
 
+<table  border='1' Width='800'>  
+<tr>
+    <th> Nama File </th>
+    <th> Tokenisasi </th>
+    <th> Stemming Porter</th>
+    <th> Stemming Nazief Adriel</th>
+</tr>
+
+<?php  
+// Perintah untuk menampilkan data
+$queri="Select * From dokumen" ;  //menampikan SEMUA
 
 
+$hasil=mysqli_query ($conn, $queri);    //fungsi untuk SQL
 
+// perintah untuk membaca dan mengambil data dalam bentuk array
+while ($data = mysqli_fetch_array ($hasil)){
+$id = $data['dokid'];
+ echo "    
+        <tr>
+        <td>".$data['nama_file']."</td>
+        <td>".$data['token']."</td>
+        <td>".$data['tokenstem']."</td>
+        <td>".$data['tokenstem2']."</td>
+        </tr> 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
+		
+		
+		
+        ";
+        
+}
 
-
-
-<html>
-<title>Form Upload</title>
-<body>
-<center><form enctype="multipart/form-data" method="POST" action="hasil_upload.php">
-File yang di upload : <input type="file" name="fupload"><br>
-Deskripsi File : <br>
-<textarea name="deskripsi" rows="8" cols="40"></textarea><br>
-<input type=submit value=Upload><center>
-</form>
-
-
-
-
-
-
-
-<!-- Image element - set the background image for the header in the line below -->
-  <div class="py-5 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=1081');">
-    <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
-    <div style="height: 200px;"></div>
-  </div>
-
-  <!-- Content section -->
-  <section class="py-5">
-    <div class="container">
-      <h1>Kelompok</h1>
-      <p class="lead">Nama: Aditya Bobby Rizki (18.01.53.0016)</p>
-      <p class="lead">Nama: Yassin Achmad Nur Aziz (18.01.53.0001)</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
-    </div>
-    <!-- /.container -->
-  </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-</body>
-
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+?>
 
 
 

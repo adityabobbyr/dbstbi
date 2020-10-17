@@ -5,10 +5,10 @@
 //(`token` ASC, 
  //`tokenstem` ASC);
  
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "dbstbi";
+$servername = "sql303.epizy.com";
+$username = "epiz_26789813";
+$password = "Mi11uQrGLV";
+$dbname = "epiz_26789813_stbi";
 $katakunci="";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

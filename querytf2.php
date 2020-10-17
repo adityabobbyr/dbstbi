@@ -3,10 +3,10 @@
 ////
 function hitungsim($query) {
 	//ambil jumlah total dokumen yang telah diindex (tbindex atau tbvektor), n
-$host='localhost';
-$user='root';
-$pass='';
-$database='dbstbi';
+$host='sql303.epizy.com';
+$user='epiz_26789813';
+$pass='Mi11uQrGLV';
+$database='epiz_26789813_stbi';
 
 //echo "hitung sim";
 
