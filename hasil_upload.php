@@ -38,7 +38,7 @@ $myArray = explode(" ", $teks); //proses tokenisasi
 
 $filteredarray = array_diff($myArray, $astoplist); //remove stopword
 $st = new IDNstemmer();
-$konek = mysqli_connect("epiz_26789813_stbi","epiz_26789813","Mi11uQrGLV","epiz_26789813_stbi");
+$konek = mysqli_connect("sql303.epizy.com","epiz_26789813","Mi11uQrGLV","epiz_26789813_stbi");
 
  
 
